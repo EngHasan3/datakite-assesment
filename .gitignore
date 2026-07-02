@@ -1,0 +1,7 @@
+# IDE / local tooling (not part of the deliverable)
+.idea/
+.claude/
+*.iml
+
+# OS
+.DS_Store

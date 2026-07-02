@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="004-seed-accounts" author="hasan.ahmad">
+        <insert tableName="accounts">
+            <column name="id" value="a0000000-0000-0000-0000-000000000001"/>
+            <column name="account_number" value="ACC-1001"/>
+            <column name="balance" valueNumeric="10000.0000"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="accounts">
+            <column name="id" value="a0000000-0000-0000-0000-000000000002"/>
+            <column name="account_number" value="ACC-1002"/>
+            <column name="balance" valueNumeric="25000.0000"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="accounts">
+            <column name="id" value="a0000000-0000-0000-0000-000000000003"/>
+            <column name="account_number" value="ACC-1003"/>
+            <column name="balance" valueNumeric="500.0000"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="accounts">
+            <column name="id" value="a0000000-0000-0000-0000-000000000004"/>
+            <column name="account_number" value="ACC-1004"/>
+            <column name="balance" valueNumeric="100000.0000"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="accounts">
+            <column name="id" value="a0000000-0000-0000-0000-000000000005"/>
+            <column name="account_number" value="ACC-1005"/>
+            <column name="balance" valueNumeric="0.0000"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+
+        <rollback>
+            <delete tableName="accounts">
+                <where>account_number in ('ACC-1001','ACC-1002','ACC-1003','ACC-1004','ACC-1005')</where>
+            </delete>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
