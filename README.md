@@ -60,7 +60,11 @@ run automatically on boot), and the frontend:
 
 ```bash
 docker compose up --build
+# or: make up
 ```
+
+A `Makefile` wraps the common commands — run `make help` for the full list (`up`, `down`, `logs`, `ps`,
+`test`, `clean`, `backend-dev`, `frontend-dev`).
 
 - Frontend dashboard: http://localhost:3000
 - Backend API: http://localhost:8080/api/v1/ledger

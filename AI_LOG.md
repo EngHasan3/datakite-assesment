@@ -1,8 +1,9 @@
 # AI Development Log
 
 **Start:** 2026-07-01, ~18:30 (local)
-**Finish:** 2026-07-01, ~21:00 (local)
-**Active hands-on time:** ~4.5 hours
+**Initial build finished:** 2026-07-01, ~21:00 (local) — core assessment requirements complete
+**Follow-up fixes finished:** 2026-07-02, ~13:45 (local) — see §3.5–3.7
+**Active hands-on time:** ~4.5 hours on the initial build, ~1.5 hours of follow-up fixes
 
 ## 1. AI tooling stack
 
@@ -11,9 +12,11 @@
   actually launched the app (Docker Compose, `mvnw spring-boot:run`, `next dev`) and drove it with a
   real headless browser (Playwright) to visually verify the dashboard rather than trusting that the
   code "looked right."
-- **A second-opinion "advisor" pass** was used at three points: before writing any code (architecture
-  review), mid-build when a test failed unexpectedly (see §3), and before declaring the backend done.
-  This caught two of the bugs below *before* I ever ran a test, and correctly predicted a third.
+- **A second-opinion "advisor" pass, backed by Claude Opus** — a stronger/independent model consulted
+  separately from the Sonnet session doing the actual implementation — was used at three points: before
+  writing any code (architecture review), mid-build when a test failed unexpectedly (see §3), and
+  before declaring the backend done. This caught two of the bugs below *before* I ever ran a test, and
+  correctly predicted a third.
 - No other AI code-gen tool (no Copilot/Cursor) was used — this was a single continuous Claude Code
   session, with me (the engineer) reviewing every diff, running the test suite, and directing the next
   step.
